@@ -17,21 +17,24 @@ const Form = () => {
     return (
        <div>
           <form>
-             <label htmlFor="username">Username:</label>
-             <input
-                id="username"
-                onChange={(e) => setUsername(e.target.value.trim())}
-                type="text"
-             />
+             <p>
+                 <label htmlFor="username">Username:</label>
+                 <input
+                    id="username"
+                    onChange={(e) => setUsername(e.target.value.trim())}
+                    type="text"
+                 />
+             </p>
 
-             <br></br>
 
-             <label htmlFor="pass">Password:</label>
-             <input
-                onChange={(e) => setPassword(e.target.value.trim())}
-                type="password"
-                id="pass"
-             />
+             <p>
+                 <label htmlFor="pass">Password:</label>
+                 <input
+                    onChange={(e) => setPassword(e.target.value.trim())}
+                    type="password"
+                    id="pass"
+                 />
+             </p>
           </form>
           {err && <p id="errorMessage">{err}</p>}
           <button onClick={validate}>Login</button>
